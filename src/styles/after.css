@@ -1,0 +1,118 @@
+.skeleton {
+  border-radius: 7px;
+  background: linear-gradient(90deg, var(--surface-2) 22%, var(--border) 48%, var(--surface-2) 75%);
+  background-size: 200% 100%;
+  animation: skeleton-shimmer 1.3s ease-in-out infinite;
+}
+
+.skeleton-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.unexpected-error {
+  max-width: 480px;
+  margin: 90px auto;
+  padding: 25px;
+  text-align: center;
+}
+
+.unexpected-error>span {
+  display: grid;
+  place-items: center;
+  margin: auto auto 17px;
+  background: #fff0e6;
+  width: 64px;
+  height: 64px;
+  border-radius: 17px;
+  color: #c46d3e;
+}
+
+.unexpected-error h2 {
+  color: var(--text-strong);
+  font-size: 21px;
+}
+
+.unexpected-error p {
+  font-size: 12px;
+  line-height: 1.8;
+  color: var(--muted);
+}
+
+.sr-only {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+@keyframes skeleton-shimmer {
+  to {
+    background-position-x: -200%;
+  }
+}
+
+@media (max-width:730px) {
+  .skeleton-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.startup-error {
+  max-width: 650px;
+  margin: 8vh auto;
+  padding: 36px;
+  border: 1px solid #ecd8e4;
+  border-radius: 18px;
+  box-shadow: 0 12px 35px #1b1f290b;
+  background: #fff;
+  color: #222638;
+  font-family: Arial, sans-serif;
+}
+
+.startup-error h1 {
+  font-size: 25px;
+  margin: 0 0 12px;
+}
+
+.startup-error p {
+  line-height: 1.65;
+  color: #555e70;
+}
+
+.startup-error pre {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  padding: 16px;
+  background: #fff1f6;
+  color: #912655;
+  border-radius: 10px;
+  font: 12px/1.55 monospace;
+}
+
+.startup-error button {
+  padding: 12px 19px;
+  background: #c1468b;
+  color: white;
+  border: 0;
+  border-radius: 9px;
+  font-weight: 700;
+  margin-top: 12px;
+}
+
+.startup-error-logo {
+  font-weight: 800;
+  font-size: 34px;
+  color: #c1468b;
+  margin-bottom: 14px;
+}
+
+@media (max-width:730px) {
+  .startup-error {
+    margin: 24px 12px;
+    padding: 22px;
+  }
+}
